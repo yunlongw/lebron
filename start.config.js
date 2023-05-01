@@ -45,6 +45,14 @@ module.exports = {
             watch: false,
             cwd: 'E:\\www\\lebron\\apps\\reply\\rpc',
         },
-
+        {
+            name: 'api',
+            script: "go",
+            args: ["run", "api.go"],
+            interpreter: 'none',
+            autorestart: false,
+            watch: false,
+            cwd: 'E:\\www\\lebron\\apps\\app\\api',
+        },
     ],
 };

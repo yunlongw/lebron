@@ -12,6 +12,7 @@ import (
 )
 
 func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
+	// 路由
 	server.AddRoutes(
 		[]rest.Route{
 			{
@@ -57,6 +58,8 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 		},
 	)
 
+
+	// 登录操作
 	server.AddRoutes(
 		[]rest.Route{
 			{
@@ -68,6 +71,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 		rest.WithPrefix("/v1/user"),
 	)
 
+	// 登录后操作
 	server.AddRoutes(
 		[]rest.Route{
 			{
@@ -115,6 +119,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 		rest.WithPrefix("/v1/user"),
 	)
 
+	// 添加购物车
 	server.AddRoutes(
 		[]rest.Route{
 			{

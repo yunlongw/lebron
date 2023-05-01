@@ -10,6 +10,7 @@ import (
 	"github.com/zeromicro/go-zero/zrpc"
 )
 
+// ServiceContext RPC 客户端
 type ServiceContext struct {
 	Config     config.Config
 	OrderRPC   order.Order

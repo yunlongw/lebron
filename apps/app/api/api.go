@@ -28,10 +28,14 @@ func main() {
 	var c config.Config
 	conf.MustLoad(*configFile, &c)
 
+	// 注册所有的服务
 	ctx := svc.NewServiceContext(c)
+
+	// 注册当前服务
 	server := rest.MustNewServer(c.RestConf)
 	defer server.Stop()
 
+	// 注册路由
 	handler.RegisterHandlers(server, ctx)
 
 	fmt.Printf("Starting server at %s:%d...\n", c.Host, c.Port)
