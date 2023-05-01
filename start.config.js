@@ -36,6 +36,15 @@ module.exports = {
             watch: false,
             cwd: 'E:\\www\\lebron\\apps\\order\\rpc',
         },
+        {
+            name: 'reply',
+            script: "go",
+            args: ["run", "reply.go"],
+            interpreter: 'none',
+            autorestart: false,
+            watch: false,
+            cwd: 'E:\\www\\lebron\\apps\\reply\\rpc',
+        },
 
     ],
 };

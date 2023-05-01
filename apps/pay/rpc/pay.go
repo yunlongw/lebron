@@ -7,7 +7,7 @@ import (
 	"github.com/zhoushuguang/lebron/apps/pay/rpc/internal/config"
 	"github.com/zhoushuguang/lebron/apps/pay/rpc/internal/server"
 	"github.com/zhoushuguang/lebron/apps/pay/rpc/internal/svc"
-	"github.com/zhoushuguang/lebron/apps/pay/rpc/rpc"
+	"github.com/zhoushuguang/lebron/apps/pay/rpc/pay"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
@@ -27,7 +27,7 @@ func main() {
 	svr := server.NewRpcServer(ctx)
 
 	s := zrpc.MustNewServer(c.RpcServerConf, func(grpcServer *grpc.Server) {
-		rpc.RegisterRpcServer(grpcServer, svr)
+		pay.RegisterRpcServer(grpcServer, svr)
 
 		if c.Mode == service.DevMode || c.Mode == service.TestMode {
 			reflection.Register(grpcServer)

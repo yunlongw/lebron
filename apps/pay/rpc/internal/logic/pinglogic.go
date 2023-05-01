@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/zhoushuguang/lebron/apps/pay/rpc/internal/svc"
-	"github.com/zhoushuguang/lebron/apps/pay/rpc/rpc"
+	"github.com/zhoushuguang/lebron/apps/pay/rpc/pay"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -23,8 +23,8 @@ func NewPingLogic(ctx context.Context, svcCtx *svc.ServiceContext) *PingLogic {
 	}
 }
 
-func (l *PingLogic) Ping(in *rpc.Request) (*rpc.Response, error) {
+func (l *PingLogic) Ping(in *pay.Request) (*pay.Response, error) {
 	// todo: add your logic here and delete this line
 
-	return &rpc.Response{}, nil
+	return &pay.Response{}, nil
 }
