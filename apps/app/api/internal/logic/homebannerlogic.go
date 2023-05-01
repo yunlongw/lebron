@@ -25,6 +25,7 @@ func NewHomeBannerLogic(ctx context.Context, svcCtx *svc.ServiceContext) *HomeBa
 
 func (l *HomeBannerLogic) HomeBanner() (resp *types.HomeBannerResponse, err error) {
 	// todo: add your logic here and delete this line
-
-	return
+	return &types.HomeBannerResponse{
+		Banners: nil,
+	}, err
 }

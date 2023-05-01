@@ -5,7 +5,7 @@ Etcd:
   Hosts:
   - 127.0.0.1:2379
   Key: product.rpc
-DataSource: root:123456@tcp(127.0.0.1:3306)/product?parseTime=true
+DataSource: admin:admin@tcp(127.0.0.1:3306)/le-product?parseTime=true
 CacheRedis:
   - Host: 127.0.0.1:6379
     Pass:
