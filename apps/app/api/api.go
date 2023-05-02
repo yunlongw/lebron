@@ -9,7 +9,6 @@ import (
 	"github.com/zhoushuguang/lebron/apps/app/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
-	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/rest"
 
 	_ "github.com/dtm-labs/driver-gozero"
@@ -19,7 +18,7 @@ var configFile = flag.String("f", "etc/api-api.yaml", "the etc file")
 
 func init() {
 	//close statis log
-	logx.DisableStat()
+	//logx.DisableStat()
 }
 
 func main() {
@@ -28,10 +27,10 @@ func main() {
 	var c config.Config
 	conf.MustLoad(*configFile, &c)
 
-	// 注册所有的服务
+	// 注册所有的 rpc client 服务, 获取 ServiceContext
 	ctx := svc.NewServiceContext(c)
 
-	// 注册当前服务
+	// 注册当前服务， http server
 	server := rest.MustNewServer(c.RestConf)
 	defer server.Stop()
 

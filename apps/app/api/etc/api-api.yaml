@@ -11,13 +11,13 @@ OrderRPC:
     Hosts:
       - 127.0.0.1:2379
     Key: order.rpc
-  NonBlock: true
+  NonBlock: false
 ProductRPC:
   Etcd:
     Hosts:
       - 127.0.0.1:2379
     Key: product.rpc
-  NonBlock: true
+  NonBlock: false
 ReplyRPC:
   Etcd:
     Hosts:
@@ -29,7 +29,7 @@ UserRPC:
     Hosts:
       - 127.0.0.1:2379
     Key: user.rpc
-  NonBlock: true
+  NonBlock: false
 
 Telemetry:
   Endpoint: http://127.0.0.1:14268/api/traces
