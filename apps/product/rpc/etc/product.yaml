@@ -1,5 +1,5 @@
 Name: product.rpc
-ListenOn: 127.0.0.1:9002
+ListenOn: 0.0.0.0:9003
 Mode: dev
 Etcd:
   Hosts:

@@ -1,0 +1,18 @@
+Name: user.rpc
+ListenOn: 172.17.0.3:9012
+Mode: dev
+Etcd:
+  Hosts:
+    - etcd:2379
+  Key: user.rpc
+
+Mysql:
+  DataSource: admin:admin@tcp(172.30.240.1:3306)/le-user?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+
+CacheRedis:
+  - Host: 172.30.240.1:6379
+    Type: node
+    Pass:
+
+#用户密码加密时使用
+Salt: HWVOFkGgPTryzICwd7qnJaZR9KQ2i8xe

@@ -1,6 +1,6 @@
 Name: reply.rpc
-ListenOn: 0.0.0.0:8082
+ListenOn: 172.17.0.3:8082
 Etcd:
   Hosts:
-  - 127.0.0.1:2379
+  - etcd:2379
   Key: reply.rpc

@@ -28,7 +28,10 @@ func main() {
 	logx.DisableStat()
 
 	var c config.Config
+	// 加载配置
 	conf.MustLoad(*configFile, &c)
+
+	// 创建 user service
 	ctx := svc.NewServiceContext(c)
 	svr := server.NewUserServer(ctx)
 

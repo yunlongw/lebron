@@ -1,6 +1,6 @@
 Name: api-api
 Host: 0.0.0.0
-Port: 8080
+Port: 8000
 
 JwtAuth:
   AccessSecret: uOvKLmVfztaXGpNYd4Z0I1SiT7MweJhl
@@ -9,27 +9,27 @@ JwtAuth:
 OrderRPC:
   Etcd:
     Hosts:
-      - 127.0.0.1:2379
+      - etcd:2379
     Key: order.rpc
   NonBlock: false
 ProductRPC:
   Etcd:
     Hosts:
-      - 127.0.0.1:2379
+      - etcd:2379
     Key: product.rpc
   NonBlock: false
 ReplyRPC:
   Etcd:
     Hosts:
-      - 127.0.0.1:2379
+      - etcd:2379
     Key: reply.rpc
   NonBlock: true
 UserRPC:
   Etcd:
     Hosts:
-      - 127.0.0.1:2379
+      - etcd:2379
     Key: user.rpc
   NonBlock: false
 
 Telemetry:
-  Endpoint: http://172.30.240.1:9412/api/v2/spans
+  Endpoint: http://jaeger:9412/api/traces

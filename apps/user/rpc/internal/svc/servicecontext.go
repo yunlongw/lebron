@@ -6,6 +6,7 @@ import (
 	"github.com/zhoushuguang/lebron/apps/user/rpc/model"
 )
 
+// ServiceContext sss
 type ServiceContext struct {
 	Config config.Config
 	//add dependency on user model

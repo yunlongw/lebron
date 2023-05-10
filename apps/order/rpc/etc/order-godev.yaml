@@ -1,0 +1,31 @@
+Name: order.rpc
+ListenOn: 172.17.0.3:9004
+Mode: dev
+Etcd:
+  Hosts:
+    - etcd:2379
+  Key: order.rpc
+
+UserRpc:
+  Etcd:
+    Hosts:
+      - etcd:2379
+    Key: user.rpc
+
+ProductRpc:
+  Etcd:
+    Hosts:
+      - etcd:2379
+    Key: product.rpc
+
+Telemetry:
+  Endpoint: jaeger:14268/api/traces
+DataSource: admin:admin@tcp(172.30.240.1:3306)/le-orders?parseTime=true
+CacheRedis:
+  - Host: 172.30.240.1:6379
+    Pass:
+    Type: node
+BizRedis:
+  Host: 172.30.240.1:6379
+  Pass:
+  Type: node

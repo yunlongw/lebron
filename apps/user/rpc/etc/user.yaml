@@ -1,5 +1,5 @@
 Name: user.rpc
-ListenOn: 127.0.0.1:9001
+ListenOn: 0.0.0.0:9002
 Mode: dev
 Etcd:
   Hosts:

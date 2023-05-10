@@ -1,0 +1,16 @@
+Name: product.rpc
+ListenOn: 172.17.0.3:9003
+Mode: dev
+Etcd:
+  Hosts:
+  - etcd:2379
+  Key: product.rpc
+DataSource: admin:admin@tcp(172.30.240.1:3306)/le-product?parseTime=true
+CacheRedis:
+  - Host: 172.30.240.1:6379
+    Pass:
+    Type: node
+BizRedis:
+  Host: 172.30.240.1:6379
+  Pass:
+  Type: node
